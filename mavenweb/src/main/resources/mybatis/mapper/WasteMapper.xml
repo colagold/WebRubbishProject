@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxu.rubbishclassify.Dao.WasteMapper">
+    <select id="selectWaste" resultType="com.sxu.rubbishclassify.Bean.Waste">
+<!--    随机获取5条展示-->
+        SELECT * FROM tablename ORDER BY RAND() LIMIT 5
+    </select>
+
+    <delete id="deleteWaste">
+        delete from tbl_waste where wasteid=#{param1}
+    </delete>
+
+    <insert id="insertWastes">
+        insert into tbl_waste values (#{param1.wasteId},#{param1.userId},#{param1.wasteTime},#{param1.wasteName},#{param1.wasteInfo})
+    </insert>
+
+    <update id="updateWasteTime">
+        update tbl_waste set wastetime=#{param2} where wasteid=#{param1}
+    </update>
+
+    <insert id="insertWaste">
+        insert into tbl_waste(userid,wastetime,wastename,wasteinfo) values (#{param1},#{param2},#{param3},#{param4})
+    </insert>
+
+</mapper>

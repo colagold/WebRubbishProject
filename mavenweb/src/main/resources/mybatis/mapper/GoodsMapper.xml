@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxu.rubbishclassify.Dao.GoodsMapper">
+    <!--查询商品的相关信息-->
+    <select id="selectGoods" resultType="com.sxu.rubbishclassify.Bean.Goods">
+<!--        select * from tbl_garbage where garbage like "%"#{name}"%" limit 5-->
+        SELECT * FROM tbl_goods ORDER BY RAND() LIMIT 5
+    </select>
+
+    <select id="selectGoodsByPrice" resultType="com.sxu.rubbishclassify.Bean.Goods">
+        select * from tbl_goods where goodsprice between #{param1} and #{param2}
+    </select>
+
+<!--    插入商品信息-->
+    <insert id="insertGoods">
+        insert into tbl_goods values (#{param1.goodsId},#{param1.userId},#{param1.goodsName},#{param1.goodsPrice},#{param1.goodsInfo},#{param1.goodsUrl})
+    </insert>
+    <insert id="insertGood">
+        insert into tbl_goods(userid,goodsname,goodsprice,goodsinfo,goodsurl) values (#{param1},#{param2},#{param3},#{param4},#{param5})
+    </insert>
+
+<!--    用户删除商品信息-->
+    <delete id="deleteGoods">
+        delete from tbl_goods where goodsid=#{param1}
+    </delete>
+
+    <update id="updateGoodsPrice">
+        update
+    </update>
+
+</mapper>

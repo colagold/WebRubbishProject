@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxu.rubbishclassify.Dao.QuestionMapper">
+    <select id="getQuestion" resultType="com.sxu.rubbishclassify.Bean.Question">
+        select * from tbl_question
+    </select>
+
+<!--    排行信息-->
+    <select id="getRank" resultType="com.sxu.rubbishclassify.Bean.Rank">
+        select * from tbl_question order by(score)
+    </select>
+
+    <select id="getUrl" resultType="com.sxu.rubbishclassify.Bean.RewardQuestion">
+        select * from tbl_reward
+    </select>
+
+    <update id="updateData" >
+        update tbl_reward set
+    </update>
+    <insert id="insertUrl">
+        insert into tbl_reward (url) values (#{param1})
+    </insert>
+</mapper>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxu.rubbishclassify.Dao.UserMapper">
+<!--    用于登录查询-->
+    <select id="selectUser" resultType="com.sxu.rubbishclassify.Bean.User">
+        select * from tbl_user where userid=#{param1}
+    </select>
+
+    <insert id="insertUser">
+        insert into tbl_user(account,password,nickname,address,telephone) values (#{param1},#{param2},#{param1},#{param3},#{param1})
+    </insert>
+
+    <update id="updateScore">
+        update tbl_user set score=#{param2} where userid=#{param1}
+    </update>
+
+    <update id="updateCreditScore">
+        update tbl_user set creditscore=#{param2} where userid=#{param1}
+    </update>
+
+    <update id="updateNickName">
+        update tbl_user set nickname=#{param2} where userid=#{param1}
+    </update>
+
+    <update id="updatePassword">
+        update tbl_user set password=#{param2} where userid=#{param1}
+    </update>
+
+    <insert id="insertU">
+        insert into tbl_user(account,password,nickname,address,telephone) values (#{param1.account},#{param1.password},#{param1.account},#{param1.address},#{param1.account})
+    </insert>
+<!--单纯删除用户-->
+    <delete id="deleteUser">
+        delete from tbl_user where userid=#{param1}
+    </delete>
+
+    <update id="updateAddress">
+        update tbl_user set address=#{param2} where userid=#{param1}
+    </update>
+
+    <update id="updateTelephone">
+        update tbl_user set telephone=#{param2} where userid=#{param1}
+    </update>
+
+
+</mapper>

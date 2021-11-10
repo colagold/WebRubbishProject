@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxu.rubbishclassify.Dao.NewsMapper">
+<!--    获取新闻-->
+    <select id="getNews" resultType="com.sxu.rubbishclassify.Bean.News">
+        select * from tbl_news
+    </select>
+<!--    删除新闻-->
+    <delete id="deleteNews">
+        delete from tbl_news where new_id=#{param1}
+    </delete>
+<!--    插入新闻-->
+    <insert id="insertNews">
+        insert into tbl_news values (#{param1.new_title},#{param1.new_author},#{param1.new_time},#{param1.new_content},#{param1.new_url},#{param1.new_look},#{param1.new_good},#{param1.new_icon},#{param1.new_tips})
+    </insert>
+<!--    更新浏览数-->
+    <update id="updateLook">
+        update tbl_news set new_look=#{param2} where new_id=#{param1}
+    </update>
+<!--    更新点赞数-->
+    <update id="updateGood">
+        update tbl_news set new_good=#{param2} where new_id=#{param1}
+    </update>
+</mapper>

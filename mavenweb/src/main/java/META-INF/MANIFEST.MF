@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Main-Class: com.sxu.rubbishclassify.RubbishclassifyApplication
+Class-Path: jul-to-slf4j-1.7.30.jar spring-boot-starter-json-2.3.4.RELEA
+ SE.jar logback-classic-1.2.3.jar jackson-databind-2.11.2.jar spring-boo
+ t-starter-web-2.3.4.RELEASE.jar jakarta.annotation-api-1.3.5.jar spring
+ -core-5.2.9.RELEASE.jar spring-boot-autoconfigure-2.3.4.RELEASE.jar lib
+ tensorflow_jni-1.14.0.jar spring-web-5.2.9.RELEASE.jar spring-aop-5.2.9
+ .RELEASE.jar HikariCP-3.4.5.jar spring-boot-2.3.4.RELEASE.jar mysql-con
+ nector-java-8.0.21.jar spring-beans-5.2.9.RELEASE.jar jackson-datatype-
+ jdk8-2.11.2.jar spring-tx-5.2.9.RELEASE.jar jaxb-api-2.3.1.jar jackson-
+ module-parameter-names-2.11.2.jar commons-dbcp-1.4.jar spring-context-5
+ .2.9.RELEASE.jar log4j-to-slf4j-2.13.3.jar spring-boot-configuration-pr
+ ocessor-2.3.4.RELEASE.jar mybatis-spring-boot-autoconfigure-2.1.3.jar j
+ ackson-datatype-jsr310-2.11.2.jar mybatis-spring-2.0.5.jar snakeyaml-1.
+ 26.jar spring-jcl-5.2.9.RELEASE.jar mybatis-spring-boot-starter-2.1.3.j
+ ar spring-expression-5.2.9.RELEASE.jar commons-pool-1.6.jar jackson-cor
+ e-2.11.2.jar spring-boot-starter-logging-2.3.4.RELEASE.jar libtensorflo
+ w-1.14.0.jar logback-core-1.2.3.jar javax.activation-api-1.2.0.jar log4
+ j-api-2.13.3.jar xmlunit-core-2.7.0.jar mybatis-3.5.5.jar spring-boot-s
+ tarter-2.3.4.RELEASE.jar jackson-annotations-2.11.2.jar spring-webmvc-5
+ .2.9.RELEASE.jar slf4j-api-1.7.30.jar spring-boot-starter-jdbc-2.3.4.RE
+ LEASE.jar spring-jdbc-5.2.9.RELEASE.jar
+
